@@ -13,14 +13,14 @@ The goal of this project was to utilize my knowledge of data analysis to uncover
 
 ### Initial Data Collection & Setup
 1. Downloaded [Cause of Death dataset from Kaggle](https://www.kaggle.com/datasets/ivanchvez/causes-of-death-our-world-in-data) (see `20222703 Causes Of Death Clean Output V2.0.csv` in `data/`).
-2. Decided on using the countries [ISO-3166 Alpha-3](https://www.iban.com/country-codes) code as a unique identifier for relating my databases to one another.
-3. Exported country information records from [statisticstimes.com](https://statisticstimes.com/geography/countries-by-continents.php). Used to associate each Alpha-3 code (e.g. CAN for Canada) to a continent & region for better analysis (see `country_info.csv` in `data/`)
+2. Decided on using the countries [ISO-3166 Alpha-3](https://www.iban.com/country-codes) code as a unique identifier for relating my tables to one another.
+3. Exported country information records from [statisticstimes.com](https://statisticstimes.com/geography/countries-by-continents.php). Used to associate each country to a continent & region for better analysis (see `country_info.xlsx` in `data/`)
 4. Used World Population dataset from [kaggle.com](https://www.kaggle.com/datasets/iamsouravbanerjee/world-population-dataset?resource=download) (see `world_population.csv` in `data/`), this provided me with additional data points such as:
    - Area (KM<sup>2</sup>)
    - Density (KM<sup>2</sup>)
    - Population Growth Rate
    - Population (1 column per each decade)
-5. Finally I created my own "Cause of Death Category" table (see `cause_of_death_categories.csv` in `data/`). This table segments the 33 causes of death into 7 categories for easier analysis and even inter-category comparison (i.e. Which infectious disease is more deadly).
+5. Finally I created my own "Cause of Death Category" table (see `cause_of_death_categories.xlsx` in `data/`). This table segments the 33 causes of death into 7 categories for easier analysis and even inter-category comparison (e.g. Which infectious disease is more deadly).
 
 ### EDA
 1. Thankfully due to the trusted sources of this data ("10.0" usability according to Kaggle), there were very few issues with the data
@@ -33,7 +33,7 @@ The goal of this project was to utilize my knowledge of data analysis to uncover
 
 ## Results
 
-I decided to go with option #2, choosing the [Cause of Death dataset](https://www.kaggle.com/datasets/ivanchvez/causes-of-death-our-world-in-data) from Kaggle. When I started poking around the data Immediately noticed that I would need to bring in population data as trying to perform any analysis with India or China included blew the graphs out of proportion. Once I had gathered the population data and performed the `number of deaths/population` calculation the visuals became much more insightful. I ended up utilizing the map visual heavily because of the geographical nature of the data, however I also took advantage of heatmaps, segmented bar graphs, scatter plots and line chats with forecasting.
+I decided to go with option #2, choosing the [Cause of Death dataset](https://www.kaggle.com/datasets/ivanchvez/causes-of-death-our-world-in-data) from Kaggle. When I started poking around the data Immediately noticed that I would need to bring in population data as trying to perform any analysis with India or China included blew the graphs out of proportion (due to their enourmous population). Once I had gathered the population data and performed the `number of deaths/population` calculation the visuals became much more insightful. I ended up utilizing the map visual heavily because of the geographical nature of the data, however I also took advantage of heatmaps, segmented bar graphs, scatter plots and line chats with forecasting.
 
 I found that the use of categorizing causes of death was a useful technique that let me hone in on various trends, here are some general patterns I found:
 
